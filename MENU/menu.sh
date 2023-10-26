@@ -131,7 +131,7 @@ echo -e " \033[1;37mType [ x ] To Exit From Menu \033[0m"
 echo -e ""
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " Version       :\033[1;36m Multiport Fallback $myver\e[0m"
-echo -e " Autoscript By : ${GB}$Name${NC}"
+echo -e " Autoscript By : ${GB}TIM3VPN{NC}"
 echo -e " Status Script : ${CB}Lifetime${NC}"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
 echo -e ""
@@ -155,7 +155,6 @@ case $opt in
 16) clear ; backupmenu ; menu ;;
 17) clear ; get-backres ;;
 18) clear ; reboot ;;
-19) clear ; $up2u ; read -n1 -r -p "Press any key to continue..." ; menu ;;
 00 | 0) clear ; menu ;;
 x | X) exit ;;
 *) clear ; menu ;;
