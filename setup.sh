@@ -712,6 +712,44 @@ echo ""
 sleep 2
 clear
 
+
+############# INSTALL RC.LOCAL
+# go to root
+cd
+
+# Edit file /etc/systemd/system/rc-local.service
+cat > /etc/systemd/system/rc-local.service <<-END
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+[Install]
+WantedBy=multi-user.target
+END
+
+# nano /etc/rc.local
+cat > /etc/rc.local <<-END
+#!/bin/sh -e
+# rc.local
+# By default this script does nothing.
+exit 0
+END
+
+# Ubah izin akses
+chmod +x /etc/rc.local
+
+# enable rc local
+systemctl enable rc-local
+systemctl start rc-local.service
+
+#######END OF RC.LOCAL INSTALL
+
 # Github Profile Repo
 Git_Profile="https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main"
 echo -e "[ ${GB}INFO${NC} ] Download Autoscript Files Into VPS"
