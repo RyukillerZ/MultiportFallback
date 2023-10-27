@@ -750,6 +750,12 @@ systemctl start rc-local.service
 
 #######END OF RC.LOCAL INSTALL
 
+#INSTALL DIG/DNSUTILS#
+
+apt install dnsutils -y
+
+#END INSTALL DNSUTILS#
+
 # Github Profile Repo
 Git_Profile="https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main"
 echo -e "[ ${GB}INFO${NC} ] Download Autoscript Files Into VPS"
