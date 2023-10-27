@@ -93,6 +93,10 @@ curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.
 sudo apt-get install speedtest
 clear
 
+# Install dig/dnsutils
+apt intall dnsutils -y
+clear
+
 # set time GMT +8 Kuala Lumpur
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 
@@ -749,12 +753,6 @@ systemctl enable rc-local
 systemctl start rc-local.service
 
 #######END OF RC.LOCAL INSTALL
-
-#INSTALL DIG/DNSUTILS#
-
-sudo apt install dnsutils -y
-
-#END INSTALL DNSUTILS#
 
 # Github Profile Repo
 Git_Profile="https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main"
