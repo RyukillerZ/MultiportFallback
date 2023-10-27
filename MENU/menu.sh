@@ -37,26 +37,6 @@ myver="$(cat /home/ver)"
 # // script version check
 serverV=$( curl -sS https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main/UPDATE/version)
 
-# // update script if available
-function updatews(){
-clear
-echo -e "[ ${GREEN}INFO${NC} ] Check for Script updates . . ."
-sleep 1
-cd
-wget -q -O /root/update.sh "https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main/UPDATE/update.sh" && chmod +x update.sh && ./update.sh
-sleep 1
-rm -f /root/update.sh
-rm -f /home/ver
-version_check=$( curl -sS https://raw.githubusercontent.com/RyukillerZ/MultiportFallback/main/UPDATE/version)
-echo "$version_check" >> /home/ver
-clear
-echo ""
-echo -e "[ ${GREEN}INFO${NC} ] Successfully Up To Date!"
-sleep 1
-echo ""
-read -n 1 -s -r -p "Press any key to continue..."
-menu
-}
 
 domain=$(cat /usr/local/etc/xray/domain)
 ISP=$(cat /usr/local/etc/xray/org)
@@ -131,7 +111,7 @@ echo -e " \033[1;37mType [ x ] To Exit From Menu \033[0m"
 echo -e ""
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " Version       :\033[1;36m Multiport Fallback $myver\e[0m"
-echo -e " Autoscript By : ${GB}TIM3VPN{NC}"
+echo -e " Autoscript By : ${GB}TIM3VPN${NC}"
 echo -e " Status Script : ${CB}Lifetime${NC}"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
 echo -e ""
