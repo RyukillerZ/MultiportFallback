@@ -94,8 +94,7 @@ sudo apt-get install speedtest
 clear
 
 # Install dig/dnsutils
-apt intall dnsutils -y
-clear
+sudo apt-get install dnsutils -y
 
 # set time GMT +8 Kuala Lumpur
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
