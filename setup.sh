@@ -752,7 +752,7 @@ systemctl start rc-local.service
 
 #INSTALL DIG/DNSUTILS#
 
-apt install dnsutils -y
+sudo apt install dnsutils -y
 
 #END INSTALL DNSUTILS#
 
