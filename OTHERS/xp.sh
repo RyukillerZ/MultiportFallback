@@ -37,6 +37,7 @@ uuid=$(grep -E "^vless " "/root/.premium/.database" | grep -w "$user $exp" | cut
 cust_id=$(grep -E "^vless " "/root/.premium/.database" | grep -w "$user $exp" | cut -d ' ' -f 6)
 seller_id=$(grep -E "^vless " "/root/.premium/.database" | grep -w "$user $exp" | cut -d ' ' -f 7)
 sed -i "/vless $user $exp/d" "/root/.premium/.database"
+echo "vless $user $exp $harini $uuid $cust_id $seller_id inactive" >>"/root/.premium/.database"
 
 rm -f /home/vps/public_html/$user-VLESSTLS.yaml /home/vps/public_html/$user-VLESSNTLS.yaml
 rm -f /usr/local/etc/xray/configlogs/vlessws-$user.txt
